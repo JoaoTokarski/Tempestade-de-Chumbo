@@ -1,1 +1,38 @@
-
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Royale - Estilo Fortnite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="player" class="character"></div>
+        <div id="enemy" class="character enemy"></div>
+        <div id="bullet" class="bullet"></div>
+        <div id="terrain"></div>
+        <div id="hud">
+            <div id="health">Vida: 100</div>
+            <div id="ammo">Munição: ∞</div>
+            <div id="kills">Eliminações: 0</div>
+        </div>
+        <div id="start-screen">
+            <h1>BATTLE ROYALE</h1>
+            <button id="start-btn">COMEÇAR JOGO</button>
+            <div class="controls">
+                <p>WASD - Movimento</p>
+                <p>Mouse - Mirar</p>
+                <p>Clique - Atirar</p>
+                <p>Espaço - Pular</p>
+            </div>
+        </div>
+        <div id="game-over" class="hidden">
+            <h1>FIM DE JOGO</h1>
+            <p id="final-score">Eliminações: 0</p>
+            <button id="restart-btn">JOGAR NOVAMENTE</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

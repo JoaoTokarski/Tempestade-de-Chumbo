@@ -1,1 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #222;
+    font-family: 'Arial', sans-serif;
+}
 
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #87CEEB, #E0F7FA);
+    overflow: hidden;
+}
+
+.character {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background-color: #333;
+    border-radius: 10px;
+    transition: transform 0.1s;
+}
+
+#player {
+    background-color: #4CAF50;
+    z-index: 10;
+}
+
+.enemy {
+    background-color: #F44336;
+    z-index: 5;
+}
+
+.bullet {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #FFEB3B;
+    border-radius: 50%;
+    z-index: 8;
+    display: none;
+}
+
+#terrain {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background-color: #8BC34A;
+    z-index: 1;
+}
+
+#hud {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 100;
+}
+
+#start-screen, #game-over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    z-index: 200;
+}
+
+#start-screen h1, #game-over h1 {
+    font-size: 3em;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.bush {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    background-color: #2E7D32;
+    border-radius: 20px;
+    bottom: 30%;
+    z-index: 2;
+}
+
+.tree {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    background-color: #5D4037;
+    bottom: 30%;
+    z-index: 2;
+}
+
+.tree:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #2E7D32;
+    border-radius: 50%;
+    bottom: 90px;
+    left: -25px;
+    z-index: 2;
+}
