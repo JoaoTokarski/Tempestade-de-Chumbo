@@ -3,42 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Battle Royale Realista</title>
+    <title>Battle Royale Extreme</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="game-container">
         <div id="player" class="character">
-            <div class="head"></div>
-            <div class="body"></div>
-            <div class="arm left"></div>
-            <div class="arm right"></div>
-            <div class="leg left"></div>
-            <div class="leg right"></div>
-            <div class="weapon"></div>
+            <div class="weapon-holder"></div>
         </div>
         <div id="terrain"></div>
+        <div id="sky"></div>
+        
         <div id="hud">
-            <div id="health">Vida: 100</div>
-            <div id="ammo">Munição: 30</div>
-            <div id="kills">Eliminações: 0</div>
-        </div>
-        <div id="start-screen">
-            <h1>BATTLE ROYALE</h1>
-            <button id="start-btn">COMEÇAR JOGO</button>
-            <div class="controls">
-                <p>WASD - Movimento</p>
-                <p>Mouse - Mirar</p>
-                <p>Clique - Atirar</p>
-                <p>Espaço - Pular</p>
+            <div class="hud-top">
+                <div class="health-bar">
+                    <div class="fill"></div>
+                    <span>100%</span>
+                </div>
+                <div class="shield-bar">
+                    <div class="fill"></div>
+                    <span>100%</span>
+                </div>
+            </div>
+            
+            <div class="hud-center">
+                <div class="weapon-display">
+                    <div class="weapon-icon">🔫</div>
+                    <div class="ammo">∞</div>
+                </div>
+                <div class="crosshair"></div>
+            </div>
+            
+            <div class="hud-bottom">
+                <div class="mission-box">
+                    <h3>MISSÃO</h3>
+                    <p class="mission-text">Elimine 5 inimigos (0/5)</p>
+                    <div class="mission-progress"></div>
+                </div>
+                <div class="weapon-prompt hidden">
+                    <span class="key">E</span> Pegar <span class="weapon-name">Bazuca</span>
+                </div>
             </div>
         </div>
-        <div id="game-over" class="hidden">
-            <h1>FIM DE JOGO</h1>
-            <p id="final-score">Eliminações: 0</p>
-            <button id="restart-btn">JOGAR NOVAMENTE</button>
+        
+        <div id="start-screen">
+            <h1>BATTLE ROYALE</h1>
+            <div class="menu-buttons">
+                <button id="start-btn">COMEÇAR</button>
+                <button id="howto-btn">COMO JOGAR</button>
+            </div>
+            <div class="news-ticker">
+                <span>NOVO: Missoes épicas • Armas lendárias • Inimigos mais inteligentes</span>
+            </div>
+        </div>
+        
+        <div id="mission-complete" class="hidden">
+            <h2>MISSÃO COMPLETA!</h2>
+            <p class="reward">+500 XP</p>
+            <p class="next-mission">Próxima missão carregando...</p>
         </div>
     </div>
+    
+    <audio id="shoot-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-laser-gun-shot-1680.mp3"></audio>
+    <audio id="explosion-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-explosion-impact-1684.mp3"></audio>
+    
     <script src="script.js"></script>
 </body>
 </html>
