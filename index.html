@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Battle Royale - Estilo Fortnite</title>
+    <title>Battle Royale Realista</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="game-container">
-        <div id="player" class="character"></div>
-        <div id="enemy" class="character enemy"></div>
-        <div id="bullet" class="bullet"></div>
+        <div id="player" class="character">
+            <div class="head"></div>
+            <div class="body"></div>
+            <div class="arm left"></div>
+            <div class="arm right"></div>
+            <div class="leg left"></div>
+            <div class="leg right"></div>
+            <div class="weapon"></div>
+        </div>
         <div id="terrain"></div>
         <div id="hud">
             <div id="health">Vida: 100</div>
-            <div id="ammo">Munição: ∞</div>
+            <div id="ammo">Munição: 30</div>
             <div id="kills">Eliminações: 0</div>
         </div>
         <div id="start-screen">
