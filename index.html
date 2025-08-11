@@ -28,11 +28,11 @@
             </div>
             
             <div class="hud-center">
+                <div class="crosshair"></div>
                 <div class="weapon-display">
                     <div class="weapon-icon">🔫</div>
                     <div class="ammo">∞</div>
                 </div>
-                <div class="crosshair"></div>
             </div>
             
             <div class="hud-bottom">
@@ -54,7 +54,7 @@
                 <button id="howto-btn">COMO JOGAR</button>
             </div>
             <div class="news-ticker">
-                <span>NOVO: Missoes épicas • Armas lendárias • Inimigos mais inteligentes</span>
+                <span>NOVO: Sistema de missões • 3 tipos de armas • Inimigos inteligentes</span>
             </div>
         </div>
         
@@ -63,10 +63,17 @@
             <p class="reward">+500 XP</p>
             <p class="next-mission">Próxima missão carregando...</p>
         </div>
+
+        <div id="game-over" class="hidden">
+            <h2>GAME OVER</h2>
+            <p class="score">Inimigos eliminados: 0</p>
+            <button id="restart-btn">Jogar Novamente</button>
+        </div>
     </div>
     
-    <audio id="shoot-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-laser-gun-shot-1680.mp3"></audio>
-    <audio id="explosion-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-explosion-impact-1684.mp3"></audio>
+    <audio id="shoot-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-laser-gun-shot-1680.mp3" preload="auto"></audio>
+    <audio id="explosion-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-explosion-impact-1684.mp3" preload="auto"></audio>
+    <audio id="powerup-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3" preload="auto"></audio>
     
     <script src="script.js"></script>
 </body>
